@@ -1,11 +1,10 @@
 <?php
 /**
- * Plugin Name: WP SAML Auth
+ * Plugin Name: Ayr WP SAML Auth
  * Version: 2.1.4
  * Description: SAML authentication for WordPress, using SimpleSAMLphp.
- * Author: Pantheon
- * Author URI: https://pantheon.io
- * Plugin URI: https://wordpress.org/plugins/wp-saml-auth/
+* Author: Pantheon, Ian
+ * Update URI: false
  * Text Domain: wp-saml-auth
  * Domain Path: /languages
  *
@@ -89,6 +88,9 @@ function wpsa_filter_option( $value, $option_name ) {
 				// Optional: Instead of using the x509 cert, you can specify the fingerprint and algorithm.
 				'certFingerprint'          => '',
 				'certFingerprintAlgorithm' => '',
+			],
+			'security' => [
+				'requestedAuthnContext' => false,
 			],
 		],
 		/**

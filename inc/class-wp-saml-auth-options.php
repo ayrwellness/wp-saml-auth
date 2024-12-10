@@ -145,6 +145,9 @@ class WP_SAML_Auth_Options {
 					'certFingerprintAlgorithm' => $options['certFingerprintAlgorithm'],
 				],
 			],
+			'security' => [
+				'requestedAuthnContext' => false,
+			],
 		];
 
 		$remaining_settings = [
